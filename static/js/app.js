@@ -1,4 +1,5 @@
 // from data.js
+// from data.js
 var tableData = data;
 
 // YOUR CODE HERE!
@@ -21,4 +22,27 @@ function buildTable(data) {
 
 	})
 }
+
+
+function handleclick() {
+
+	d3.event.preventDefault();
+
+	let date = d3.select('#datetime').property('value');
+	let filter_data = tableData;
+
+	// Check and filter the data using that date;
+	if(date) {
+		filter_data = filter_data.filter((row) => row.datetime === date);
+	}
+	buildTable(filter_data);
+
+}
+
+
+d3.selectAll('#filter-btn').on('click', handleclick);
+
+
+
+
 buildTable(tableData);
