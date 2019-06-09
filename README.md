@@ -1,3 +1,3 @@
 # UFO-Sightings-JS
-Javascript and DOM
+Javascript(d3.js) and DOM
 https://reemaratnani.github.io/UFO-Sightings-JS/
